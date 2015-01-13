@@ -385,6 +385,7 @@ public class ImageView<E> extends JScrollPane{
 					System.out.println("hahah");
 					for (Path p : polyPaths){
 						g.setColor(Color.CYAN);
+						if(p.isInner()) g.setColor(Color.YELLOW);
 						g2.setStroke(new BasicStroke(2));
 						for(Edge edge : p){
 							Point start = new Point((edge.getStartPosition())%image.getWidth(), edge.getStartPosition()/image.getWidth());

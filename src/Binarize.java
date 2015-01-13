@@ -516,6 +516,7 @@ public class Binarize extends JPanel {
 		Vector<Path> polyPaths = new Vector<Path>();
 		for (Path conturePath : conturePaths) {
 			Path streightPath  = getStreightPath(conturePath, width);
+			streightPath.setInner(conturePath.isInner());
 			polyPaths.add(streightPath);
 		}
 		return polyPaths;	
